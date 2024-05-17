@@ -23,12 +23,12 @@ MASTER_ADDR=${MASTER_ADDR:-localhost}
 # The port for communication
 MASTER_PORT=${MASTER_PORT:-6001}
 
-MODEL="Qwen/Qwen1.5-7B" # Set the path if you do not want to load from huggingface directly
+MODEL="/home/dxd/qwen1.5-7b-chat" # Set the path if you do not want to load from huggingface directly
 # ATTENTION: specify the path to your training data, which should be a json file consisting of a list of conversations.
 # See the section for finetuning in README for more information.
-DATA="path_to_data"
-DS_CONFIG_PATH="finetune/ds_config_zero3.json"
-USE_LORA=False
+DATA="/home/dxd/output.jsonl"
+DS_CONFIG_PATH="/home/dxd/Qwen1.5/examples/sft/ds_config_zero3.json"
+USE_LORA=True
 Q_LORA=False
 
 function usage() {
